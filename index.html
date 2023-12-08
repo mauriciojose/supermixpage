@@ -1,7 +1,108 @@
-<div class="wrapper">
+
+
+<!DOCTYPE HTML>
+<html lang=”pt-br”>
+<head>
+  <meta charset=”UTF-8”>
+  <title></title>
+
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: system-ui;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* background image with opacity */
+body::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('https://images.pexels.com/photos/164357/pexels-photo-164357.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+  background-position: center;
+  background-size: cover;
+  background-norepeat: no-repeat;
+  background-attachment: fixed;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+.wrapper {
+  margin: 0 15px;
+  max-width: 960px;
+}
+
+h1 {
+  position: relative;
+  top: 0px;
+  animation: title 2s ease-in forwards;
+}
+
+@keyframes title {
+  0% {top: -100vh;}
+  100% {top: 0;}
+}
+
+.content {
+  margin: 25px 0 50px 0;
+  position: relative;
+  bottom: 0;
+  animation: content 2s ease-in forwards;
+}
+
+@keyframes content {
+  0% {bottom: -100vh;}
+  100% {bottom: 0;}
+}
+
+.btn {
+  border: 2px solid #fff;
+  color: #fff;
+  padding: .5rem 1rem;
+  text-decoration: none;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: all .3s linear;
+  animation: btn 1.5s ease-in 1.5s forwards;
+}
+
+@keyframes btn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+}
+  </style>
+</head>
+<body>
+  <div class="wrapper">
   <h1>Olá, tudo bem?</h1>
   <p class="content">
     Para excluir sua conta basta acessar o aplicativo, nas informações da conta tem a opção de excluir conta. <br/>
     Ou envie um email com seu telefone de login e nome para mauriciojosemirandaguimaraes@gmail.com com o assunto: EXCLUSAO DE CONTA SUPERMIX. Que validaremos os dados e excluiremos os seus dados
   </p>
 </div>
+</body>
+</html>
